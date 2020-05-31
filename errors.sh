@@ -1,4 +1,5 @@
 #!/bin/bash
+#prompting user to enter a secret code
 read -s -p "what's the secret code?: " option
  
  #secret=shhh, Don't tell anyone!

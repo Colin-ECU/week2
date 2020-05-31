@@ -10,5 +10,5 @@ echo
 #The hidden password will be stored in a new file secret.txt
 #The password will be stored in encrypted SHA256 format
 echo $password | sha256sum > secret.txt
-
+echo
 exit 0

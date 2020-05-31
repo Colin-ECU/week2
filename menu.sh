@@ -6,13 +6,14 @@ cd ~/scripts/portfolio/
 ./passwordCheck.sh 
 
 # If the secret password matches the sha256sum then the 3 options are offered
+# if the match is True (0) then the folder options are displayed.
 if [ $? -eq 0 ]; then
     echo Select an option from the below list:
     echo "1. Create a folder" 
     echo "2. Copy a folder" 
     echo "3. Set a password"
     
-    #The user is asked to enter an option selection from the list
+    #The user is prompted to enter an option selection from the list
     read -p "Please type your selection here:  " option
 
     # Each option will be directed to the relevant script file and run
@@ -31,6 +32,7 @@ if [ $? -eq 0 ]; then
 
 else
     #If user password entered is not correct the Access Denied error will be displayed
+    # The Access Denied response is generated from the passwordChech.sh
     echo 
     exit 1
 
