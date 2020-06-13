@@ -1,9 +1,10 @@
 #!/bin/bash
-#prompting user to enter a secret code
-read -s -p "what's the secret code?: " option
+# The main error on this exercise was the missing read command to commence the script.
+# Prompting user to enter a secret code.
+read -s -p "Type your secret in here..if you remember?: " option
  
- #secret=shhh, Don't tell anyone!
- #if the user types in the correct secret, tell them they got it right!
+ # Secret=shhh, Don't tell anyone!
+ # If the user types in the correct secret, tell them they got it right!
  if [ "$option" = "shhh" ]; then
      echo "You got it right!"
      correct=true
@@ -14,10 +15,10 @@ read -s -p "what's the secret code?: " option
  
  case $correct in
  false)
-     echo "Go Away!" #people who get it wrong need to be told to go away!
+     echo "Go Away!" # People who get it wrong need to be told to go away!
      ;;
  true)
      echo "you have unlocked the secret menu!"
-     #TODO: add a secret menu for people in the know.
+     # TODO: add a secret menu for people in the know.
      ;;
  esac
